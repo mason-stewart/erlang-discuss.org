@@ -216,9 +216,7 @@ authed.get('/edit/:id', requireAuth(), function (req, res, next) {
     .done(null, next)
 })
 var moderaters = [
-  'forbes at lindesay.co.uk',
-  'domenic at domenicdenicola.com',
-  'dignifiedquire at gmail.com'
+  'masondesu at gmail.com'
 ].map(function (u) { return u.replace(' at ', '@') })
 authed.post('/edit/:id', function (req, res, next) {
   if (!req.user || !req.user.email) {
@@ -247,7 +245,7 @@ authed.post('/edit/:id', function (req, res, next) {
 })
 
 function semantic(a) {
-  return a.replace(/\r/g, '').replace(/\n```js\n/gi, '').replace(/\n```javascript\n/gi, '').replace(/`/g, '').replace(/\s/g, '')
+  return a.replace(/\r/g, '').replace(/\n```erl\n/gi, '').replace(/\n```erlang\n/gi, '').replace(/`/g, '').replace(/\s/g, '')
 }
 
 authed.locals = app.locals

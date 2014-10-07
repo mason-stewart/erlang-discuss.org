@@ -1,12 +1,15 @@
 {
-  "name": "esdiscuss.org",
-  "version": "5.2.1",
+  "name": "erlang-discuss.org",
+  "version": "5.2.1-1",
   "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/esdiscuss/esdiscuss.org.git"
   },
-  "author": "ForbesLindesay",
+  "authors": [
+    "ForbesLindesay",
+    "Mason Stewart"
+  ],
   "license": "MIT",
   "dependencies": {
     "express": "~4.0.0",
@@ -33,7 +36,7 @@
     "cookie-session": "~1.0.1"
   },
   "scripts": {
-    "start": "server.js",
+    "start": "node server.js",
     "test": "mocha -R spec"
   },
   "host": "esdiscuss.org",
@@ -44,5 +47,6 @@
     "mocha-as-promised": "~1.4",
     "mocha": "~1.10",
     "lazy-promise": "~1.1"
-  }
+  },
+  "subdomain": "erlang-discuss"
 }

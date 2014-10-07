@@ -32,7 +32,9 @@ block content
         .comment-wrapper
           .comment-header
             a(href='#content-' + mid) #
-            |  #{message.from.name || message.from.email.replace(/@/g, ' at ')} (#{message.date.fromNow()})
+            | #{message.from.name} 
+            img(src='http://erlang.org/pipermail/erlang-questions/emailaddrs/ema-' + message.from.emailId + '.png')
+            | (#{message.date.fromNow()})
             ul.buttons
               if (message.updated)
                 li
